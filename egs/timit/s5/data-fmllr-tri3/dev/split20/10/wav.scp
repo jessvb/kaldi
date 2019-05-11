@@ -1,0 +1,16 @@
+mdlf0_si1583 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/si1583.wav |
+mdlf0_si2213 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/si2213.wav |
+mdlf0_si953 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/si953.wav |
+mdlf0_sx143 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/sx143.wav |
+mdlf0_sx233 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/sx233.wav |
+mdlf0_sx323 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/sx323.wav |
+mdlf0_sx413 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/sx413.wav |
+mdlf0_sx53 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr7/mdlf0/sx53.wav |
+mdls0_si1628 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/si1628.wav |
+mdls0_si2258 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/si2258.wav |
+mdls0_si998 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/si998.wav |
+mdls0_sx188 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/sx188.wav |
+mdls0_sx278 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/sx278.wav |
+mdls0_sx368 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/sx368.wav |
+mdls0_sx8 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/sx8.wav |
+mdls0_sx98 /workspace/zhorai-workspace/kaldi/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /workspace/zhorai-workspace/datasets/baseline-timit/test/dr4/mdls0/sx98.wav |
