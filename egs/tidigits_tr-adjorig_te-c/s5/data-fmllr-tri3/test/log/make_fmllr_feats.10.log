@@ -1,0 +1,16 @@
+# copy-feats 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/10/utt2spk scp:data/test/split10/10/cmvn.scp scp:data/test/split10/10/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split10/10/utt2spk "ark:cat exp/tri3/decode_test/trans.* |" ark:- ark:- |' ark,scp:/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-adjorig_te-c/s5/data-fmllr-tri3/test/data/feats_fmllr_test.10.ark,/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-adjorig_te-c/s5/data-fmllr-tri3/test/data/feats_fmllr_test.10.scp 
+# Started at Mon May  6 04:38:20 UTC 2019
+#
+copy-feats 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/10/utt2spk scp:data/test/split10/10/cmvn.scp scp:data/test/split10/10/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split10/10/utt2spk "ark:cat exp/tri3/decode_test/trans.* |" ark:- ark:- |' ark,scp:/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-adjorig_te-c/s5/data-fmllr-tri3/test/data/feats_fmllr_test.10.ark,/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-adjorig_te-c/s5/data-fmllr-tri3/test/data/feats_fmllr_test.10.scp 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats --utt2spk=ark:data/test/split10/10/utt2spk 'ark:cat exp/tri3/decode_test/trans.* |' ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split10/10/utt2spk scp:data/test/split10/10/cmvn.scp scp:data/test/split10/10/feats.scp ark:- 
+transform-feats exp/tri3/final.mat ark:- ark:- 
+LOG (apply-cmvn[5.5.286~1-b96ca]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 385 utterances, errors on 0
+LOG (transform-feats[5.5.286~1-b96ca]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -86.2199 over 80896 frames.
+LOG (transform-feats[5.5.286~1-b96ca]:main():transform-feats.cc:161) Applied transform to 385 utterances; 0 had errors.
+LOG (transform-feats[5.5.286~1-b96ca]:main():transform-feats.cc:158) Overall average logdet is 2.10061 over 80896 frames.
+LOG (transform-feats[5.5.286~1-b96ca]:main():transform-feats.cc:161) Applied transform to 385 utterances; 0 had errors.
+LOG (copy-feats[5.5.286~1-b96ca]:main():copy-feats.cc:143) Copied 385 feature matrices.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon May  6 04:38:20 UTC 2019, elapsed time 0 seconds
