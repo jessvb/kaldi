@@ -1,0 +1,11 @@
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3/decode_test data-fmllr-tri3/test data/test exp/tri3 data-fmllr-tri3/test/log data-fmllr-tri3/test/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/test to data-fmllr-tri3/test
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/test
+steps/nnet/make_fmllr_feats.sh: Done!, type lda_fmllr, data/test --> data-fmllr-tri3/test, using : raw-trans None, gmm exp/tri3, trans exp/tri3/decode_test
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3_ali data-fmllr-tri3/train data/train exp/tri3 data-fmllr-tri3/train/log data-fmllr-tri3/train/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/train to data-fmllr-tri3/train
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/train
+bash: line 1:  4462 Aborted                 (core dumped) ( copy-feats 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split10/1/utt2spk scp:data/train/split10/1/cmvn.scp scp:data/train/split10/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split10/1/utt2spk "ark:cat exp/tri3_ali/trans.* |" ark:- ark:- |' ark,scp:/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-a_te-ac/s5/data-fmllr-tri3/train/data/feats_fmllr_train.1.ark,/workspace/zhorai-workspace/kaldi/egs/tidigits_tr-a_te-ac/s5/data-fmllr-tri3/train/data/feats_fmllr_train.1.scp ) 2>> data-fmllr-tri3/train/log/make_fmllr_feats.1.log >> data-fmllr-tri3/train/log/make_fmllr_feats.1.log
+run.pl: 1 / 10 failed, log is in data-fmllr-tri3/train/log/make_fmllr_feats.*.log
