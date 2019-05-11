@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# Copyright 2012 Johns Hopkins University (Author: Daniel Povey)
+#Copyright 2012 Johns Hopkins University (Author: Daniel Povey)
 # Apache 2.0.
 
 # This script prepares the lang/ directory.
@@ -11,7 +9,10 @@
 
 # Decided to do this using something like a real lexicon, although we
 # could also have used whole-word models.
-tmpdir=data/local/dict
+## TODO: changed the tmpdir to be the same dir as the other file... data/local/data instead of data/local/dict...
+## hopefully that's okay! I needed to do it so that we're accessing data/local/data/train.flist correctly
+#tmpdir=data/local/dict
+tmpdir=data/local/data
 lang=data/lang
 mkdir -p $tmpdir
 
@@ -52,7 +53,7 @@ echo sil > $p/context_indep.txt
 echo sil > $p/optional_silence.txt
 grep -v -w sil $tmpdir/phone.list > $p/nonsilence.txt
 touch $p/disambig.txt # disambiguation-symbols list, will be empty.
-touch $p/extra_questions.txt # list of "extra questions"-- empty; we don't
+touch $p/extra_questions.txt # list of "extra questions"-- empty; we dont
  # have things like tone or word-positions or stress markings.
 cat $tmpdir/phone.list > $p/sets.txt # list of "phone sets"-- each phone is in its
  # own set.  Normally, each line would have a bunch of word-position-dependenent or
@@ -62,6 +63,7 @@ for t in silence nonsilence context_indep optional_silence disambig; do
   utils/sym2int.pl $lang/phones.txt <$p/$t.txt >$p/$t.int
   cat $p/$t.int | awk '{printf(":%d", $1);} END{printf "\n"}' | sed s/:// > $p/$t.csl 
 done
+
 for t in extra_questions sets; do
   utils/sym2int.pl $lang/phones.txt <$p/$t.txt >$p/$t.int
 done
@@ -69,7 +71,8 @@ done
 cat $tmpdir/phone.list | awk '{printf("shared split %s\n", $1);}' >$p/roots.txt
 utils/sym2int.pl -f 3-  $lang/phones.txt $p/roots.txt >$p/roots.int
 
-echo z > $lang/oov.txt # we map OOV's to this.. there are no OOVs in this setup,
+
+echo z > $lang/oov.txt # we map OOVs to this.. there are no OOVs in this setup,
    # but the scripts expect this file to exist.
 utils/sym2int.pl $lang/words.txt <$lang/oov.txt >$lang/oov.int
 
@@ -108,13 +111,41 @@ penalty=`perl -e '$prob = 1.0/12; print -log($prob); '` # negated log-prob,
    fstarcsort --sort_type=ilabel > $lang/G.fst
 
 
+############################## ADDING THE FOLLOWING WHICH IS FROM BELOW EXIT 0 ##############################
+
+
+for x in train test; do
+  # get scp file that has utterance-ids and maps to the sphere file.
+  cat $tmpdir/$x.flist | perl -ane 'm|/(..)/([1-9zo]+[ab])\.wav| || die "bad line $_"; print "$1_$2 $_"; ' \
+   | sort > $tmpdir/${x}_sph.scp
+  # turn it into one that has a valid .wav format in the modern sense (i.e. RIFF format, not sphere).
+  # This file goes into its final location
+  mkdir -p data/$x
+  awk '{printf("%s '$sph2pipe' -f wav %s |\n", $1, $2);}' < $tmpdir/${x}_sph.scp > data/$x/wav.scp
+
+  # Now get the "text" file that says what the transcription is.
+  cat data/$x/wav.scp | 
+   perl -ane 'm/^(.._([1-9zo]+)[ab]) / || die; $text = join(" ", split("", $2)); print "$1 $text\n";' \
+    <data/$x/wav.scp >data/$x/text
+
+  # now get the "utt2spk" file that says, for each utterance, the speaker name.  
+  perl -ane 'm/^((..)_\S+) / || die; print "$1 $2\n"; ' \
+    <data/$x/wav.scp >data/$x/utt2spk
+  # create the file that maps from speaker to utterance-list.
+  utils/utt2spk_to_spk2utt.pl <data/$x/utt2spk >data/$x/spk2utt
+done
+
+
+############################## DONE ADDING FROM BELOW EXIT 0 ##############################
+
+
 exit 0;
+## ^^ TODO WHY ARE WE EXITING???
 
 
 
 
-
-
+echo "THIS WILL NEVER BE RUN"
 
 
 if [ $# -ne 0 ]; then
@@ -147,7 +178,13 @@ if [ ! -x $sph2pipe ]; then
    exit 1;
 fi
 
+echo "TODO PLZ WORK"
+
 for x in train test; do
+echo "------------------------------------------------"
+echo "HERERERRERE1"
+ls $tmpdir/$x.flist
+echo "------------------------------------------------"
   # get scp file that has utterance-ids and maps to the sphere file.
   cat $tmpdir/$x.flist | perl -ane 'm|/(..)/([1-9zo]+[ab])\.wav| || die "bad line $_"; print "$1_$2 $_"; ' \
    | sort > $tmpdir/${x}_sph.scp
@@ -157,6 +194,10 @@ for x in train test; do
   awk '{printf("%s '$sph2pipe' -f wav %s |\n", $1, $2);}' < $tmpdir/${x}_sph.scp > data/$x/wav.scp
 
   # Now get the "text" file that says what the transcription is.
+echo ------------------------------------------------
+echo HERERERRERE2
+head -n15 data/$x/wav.scp
+echo ------------------------------------------------
   cat data/$x/wav.scp | 
    perl -ane 'm/^(.._([1-9zo]+)[ab]) / || die; $text = join(" ", split("", $2)); print "$1 $text\n";' \
     <data/$x/wav.scp >data/$x/text

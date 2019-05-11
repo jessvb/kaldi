@@ -92,7 +92,6 @@ else
   write_num_frames_opt=
 fi
 
-
 if [ -f $data/segments ]; then
   echo "$0 [info]: segments file exists: using that."
 
@@ -123,7 +122,7 @@ else
 
   # add ,p to the input rspecifier so that we can just skip over
   # utterances that have bad wave data.
-
+## TODO: this is erroring ... 
   $cmd JOB=1:$nj $logdir/make_mfcc_${name}.JOB.log \
     compute-mfcc-feats  $vtln_opts --verbose=2 --config=$mfcc_config \
      scp,p:$logdir/wav_${name}.JOB.scp ark:- \| \
