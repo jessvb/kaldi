@@ -1,0 +1,616 @@
+be_1224a 1 2 2 4
+be_12381a 1 2 3 8 1
+be_138a 1 3 8
+be_14a 1 4
+be_17592a 1 7 5 9 2
+be_1a 1
+be_1b 1
+be_21oa 2 1 o
+be_234525za 2 3 4 5 2 5 z
+be_26z4a 2 6 z 4
+be_2a 2
+be_2b 2
+be_2z2a 2 z 2
+be_2z66a 2 z 6 6
+be_3117a 3 1 1 7
+be_35a 3 5
+be_36o4o69a 3 6 o 4 o 6 9
+be_39a 3 9
+be_3a 3
+be_3b 3
+be_3zz5a 3 z z 5
+be_4167478a 4 1 6 7 4 7 8
+be_41zza 4 1 z z
+be_42914a 4 2 9 1 4
+be_432151oa 4 3 2 1 5 1 o
+be_495a 4 9 5
+be_4a 4
+be_4b 4
+be_52a 5 2
+be_551a 5 5 1
+be_56a 5 6
+be_57o2a 5 7 o 2
+be_58a 5 8
+be_5a 5
+be_5b 5
+be_628a 6 2 8
+be_63a 6 3
+be_68265a 6 8 2 6 5
+be_68a 6 8
+be_6a 6
+be_6b 6
+be_6z483a 6 z 4 8 3
+be_71376a 7 1 3 7 6
+be_7256a 7 2 5 6
+be_73794a 7 3 7 9 4
+be_778a 7 7 8
+be_793a 7 9 3
+be_7a 7
+be_7b 7
+be_8242a 8 2 4 2
+be_86oo5a 8 6 o o 5
+be_87za 8 7 z
+be_8849za 8 8 4 9 z
+be_89653a 8 9 6 5 3
+be_8a 8
+be_8b 8
+be_919a 9 1 9
+be_9333a 9 3 3 3
+be_9759462a 9 7 5 9 4 6 2
+be_987345za 9 8 7 3 4 5 z
+be_9892a 9 8 9 2
+be_9a 9
+be_9b 9
+be_o3o8oo1a o 3 o 8 o o 1
+be_o4a o 4
+be_o5a o 5
+be_o97a o 9 7
+be_o9o8o2oa o 9 o 8 o 2 o
+be_oa o
+be_ob o
+be_z1163a z 1 1 6 3
+be_z1a z 1
+be_z5z3z86a z 5 z 3 z 8 6
+be_z669547a z 6 6 9 5 4 7
+be_z9z8zz3a z 9 z 8 z z 3
+be_za z
+be_zb z
+bf_11oa 1 1 o
+bf_12oa 1 2 o
+bf_1369o76a 1 3 6 9 o 7 6
+bf_17z5za 1 7 z 5 z
+bf_193o254a 1 9 3 o 2 5 4
+bf_1a 1
+bf_1b 1
+bf_22a 2 2
+bf_24a 2 4
+bf_266a 2 6 6
+bf_27a 2 7
+bf_29a 2 9
+bf_2a 2
+bf_2b 2
+bf_3189a 3 1 8 9
+bf_31z21a 3 1 z 2 1
+bf_323zza 3 2 3 z z
+bf_3273a 3 2 7 3
+bf_3678a 3 6 7 8
+bf_3a 3
+bf_3b 3
+bf_413a 4 1 3
+bf_43a 4 3
+bf_4477a 4 4 7 7
+bf_4521a 4 5 2 1
+bf_4979oa 4 9 7 9 o
+bf_4a 4
+bf_4b 4
+bf_53a 5 3
+bf_5568a 5 5 6 8
+bf_565a 5 6 5
+bf_5825a 5 8 2 5
+bf_5923464a 5 9 2 3 4 6 4
+bf_5a 5
+bf_5b 5
+bf_62a 6 2
+bf_675za 6 7 5 z
+bf_688a 6 8 8
+bf_6a 6
+bf_6b 6
+bf_6o357a 6 o 3 5 7
+bf_6oo2a 6 o o 2
+bf_7283oa 7 2 8 3 o
+bf_72o464oa 7 2 o 4 6 4 o
+bf_7433za 7 4 3 3 z
+bf_7886a 7 8 8 6
+bf_7a 7
+bf_7b 7
+bf_7o17o49a 7 o 1 7 o 4 9
+bf_812a 8 1 2
+bf_826z358a 8 2 6 z 3 5 8
+bf_8415281a 8 4 1 5 2 8 1
+bf_85oa 8 5 o
+bf_8a 8
+bf_8b 8
+bf_8o518a 8 o 5 1 8
+bf_92a 9 2
+bf_9479165a 9 4 7 9 1 6 5
+bf_98a 9 8
+bf_9a 9
+bf_9b 9
+bf_9z8a 9 z 8
+bf_9za 9 z
+bf_o19a o 1 9
+bf_o542oa o 5 4 2 o
+bf_o834a o 8 3 4
+bf_o8o33a o 8 o 3 3
+bf_o937762a o 9 3 7 7 6 2
+bf_oa o
+bf_ob o
+bf_z224869a z 2 2 4 8 6 9
+bf_z451z95a z 4 5 1 z 9 5
+bf_z4a z 4
+bf_z53a z 5 3
+bf_z7591a z 7 5 9 1
+bf_za z
+bf_zb z
+bg_119oo39a 1 1 9 o o 3 9
+bg_1647a 1 6 4 7
+bg_17z68a 1 7 z 6 8
+bg_18o97a 1 8 o 9 7
+bg_1962o41a 1 9 6 2 o 4 1
+bg_1a 1
+bg_1b 1
+bg_22377a 2 2 3 7 7
+bg_2369526a 2 3 6 9 5 2 6
+bg_25o8a 2 5 o 8
+bg_28o14a 2 8 o 1 4
+bg_2a 2
+bg_2b 2
+bg_2z1z767a 2 z 1 z 7 6 7
+bg_3131a 3 1 3 1
+bg_3448a 3 4 4 8
+bg_385359oa 3 8 5 3 5 9 o
+bg_39425a 3 9 4 2 5
+bg_3a 3
+bg_3b 3
+bg_3za 3 z
+bg_43a 4 3
+bg_44a 4 4
+bg_49a 4 9
+bg_4a 4
+bg_4b 4
+bg_4za 4 z
+bg_4zzzza 4 z z z z
+bg_51a 5 1
+bg_54598a 5 4 5 9 8
+bg_552a 5 5 2
+bg_557z9a 5 5 7 z 9
+bg_56a 5 6
+bg_5a 5
+bg_5b 5
+bg_6374a 6 3 7 4
+bg_6682a 6 6 8 2
+bg_66o583oa 6 6 o 5 8 3 o
+bg_6a 6
+bg_6b 6
+bg_6z8a 6 z 8
+bg_6z921a 6 z 9 2 1
+bg_7264932a 7 2 6 4 9 3 2
+bg_7332a 7 3 3 2
+bg_76a 7 6
+bg_791a 7 9 1
+bg_7a 7
+bg_7b 7
+bg_7o51a 7 o 5 1
+bg_813a 8 1 3
+bg_824o2o9a 8 2 4 o 2 o 9
+bg_854a 8 5 4
+bg_869a 8 6 9
+bg_87a 8 7
+bg_8a 8
+bg_8b 8
+bg_928a 9 2 8
+bg_93a 9 3
+bg_95615a 9 5 6 1 5
+bg_984a 9 8 4
+bg_9a 9
+bg_9b 9
+bg_9z4a 9 z 4
+bg_o147a o 1 4 7
+bg_o346571a o 3 4 6 5 7 1
+bg_o68a o 6 8
+bg_oa o
+bg_ob o
+bg_oo6735oa o o 6 7 3 5 o
+bg_ooa o o
+bg_z299z33a z 2 9 9 z 3 3
+bg_z5z3a z 5 z 3
+bg_z65a z 6 5
+bg_z8421a z 8 4 2 1
+bg_za z
+bg_zb z
+bg_zz5za z z 5 z
+bj_135a 1 3 5
+bj_14248a 1 4 2 4 8
+bj_15o3456a 1 5 o 3 4 5 6
+bj_196a 1 9 6
+bj_1a 1
+bj_1b 1
+bj_1o9a 1 o 9
+bj_218za 2 1 8 z
+bj_229a 2 2 9
+bj_25z57a 2 5 z 5 7
+bj_2a 2
+bj_2b 2
+bj_2o6o7a 2 o 6 o 7
+bj_2z51a 2 z 5 1
+bj_376oo28a 3 7 6 o o 2 8
+bj_378o726a 3 7 8 o 7 2 6
+bj_39a 3 9
+bj_3a 3
+bj_3b 3
+bj_3ooo1a 3 o o o 1
+bj_3za 3 z
+bj_41z8a 4 1 z 8
+bj_42a 4 2
+bj_45o4oa 4 5 o 4 o
+bj_4718a 4 7 1 8
+bj_4a 4
+bj_4b 4
+bj_4z7162za 4 z 7 1 6 2 z
+bj_52a 5 2
+bj_533a 5 3 3
+bj_5495a 5 4 9 5
+bj_55a 5 5
+bj_5a 5
+bj_5b 5
+bj_5z9z7a 5 z 9 z 7
+bj_6446a 6 4 4 6
+bj_64881a 6 4 8 8 1
+bj_668a 6 6 8
+bj_67a 6 7
+bj_6a 6
+bj_6b 6
+bj_6z38za 6 z 3 8 z
+bj_726a 7 2 6
+bj_7768736a 7 7 6 8 7 3 6
+bj_78674a 7 8 6 7 4
+bj_7a 7
+bj_7b 7
+bj_7o4oa 7 o 4 o
+bj_7z46989a 7 z 4 6 9 8 9
+bj_82a 8 2
+bj_84991z2a 8 4 9 9 1 z 2
+bj_85398a 8 5 3 9 8
+bj_86194a 8 6 1 9 4
+bj_87o1215a 8 7 o 1 2 1 5
+bj_8a 8
+bj_8b 8
+bj_923a 9 2 3
+bj_9357a 9 3 5 7
+bj_97za 9 7 z
+bj_9a 9
+bj_9b 9
+bj_9o5a 9 o 5
+bj_9za 9 z
+bj_o247a o 2 4 7
+bj_o65a o 6 5
+bj_o833132a o 8 3 3 1 3 2
+bj_o959a o 9 5 9
+bj_oa o
+bj_ob o
+bj_ooa o o
+bj_z1a z 1
+bj_z343112a z 3 4 3 1 1 2
+bj_z443659a z 4 4 3 6 5 9
+bj_z991a z 9 9 1
+bj_za z
+bj_zb z
+bj_zza z z
+bk_118a 1 1 8
+bk_16676o2a 1 6 6 7 6 o 2
+bk_16a 1 6
+bk_176a 1 7 6
+bk_1a 1
+bk_1b 1
+bk_1o256a 1 o 2 5 6
+bk_24a 2 4
+bk_2663944a 2 6 6 3 9 4 4
+bk_28687a 2 8 6 8 7
+bk_29754a 2 9 7 5 4
+bk_2a 2
+bk_2b 2
+bk_2oa 2 o
+bk_3185a 3 1 8 5
+bk_35299a 3 5 2 9 9
+bk_3837oa 3 8 3 7 o
+bk_393oa 3 9 3 o
+bk_3a 3
+bk_3b 3
+bk_3z6za 3 z 6 z
+bk_42442a 4 2 4 4 2
+bk_43a 4 3
+bk_47a 4 7
+bk_49a 4 9
+bk_4a 4
+bk_4b 4
+bk_4o46934a 4 o 4 6 9 3 4
+bk_53375a 5 3 3 7 5
+bk_5581a 5 5 8 1
+bk_573a 5 7 3
+bk_582a 5 8 2
+bk_5a 5
+bk_5b 5
+bk_5z1a 5 z 1
+bk_614zza 6 1 4 z z
+bk_6194a 6 1 9 4
+bk_633oa 6 3 3 o
+bk_65a 6 5
+bk_6a 6
+bk_6b 6
+bk_6z5a 6 z 5
+bk_72o9oo9a 7 2 o 9 o o 9
+bk_74o4738a 7 4 o 4 7 3 8
+bk_779a 7 7 9
+bk_783z41za 7 8 3 z 4 1 z
+bk_7928a 7 9 2 8
+bk_7a 7
+bk_7b 7
+bk_82234a 8 2 2 3 4
+bk_8557a 8 5 5 7
+bk_8884a 8 8 8 4
+bk_8a 8
+bk_8b 8
+bk_8o7oo36a 8 o 7 o o 3 6
+bk_8za 8 z
+bk_91za 9 1 z
+bk_95a 9 5
+bk_96o8o12a 9 6 o 8 o 1 2
+bk_97a 9 7
+bk_989199za 9 8 9 1 9 9 z
+bk_9a 9
+bk_9b 9
+bk_o36a o 3 6
+bk_o5465o1a o 5 4 6 5 o 1
+bk_o643a o 6 4 3
+bk_o6a o 6
+bk_oa o
+bk_ob o
+bk_oo5ooa o o 5 o o
+bk_z598a z 5 9 8
+bk_z7za z 7 z
+bk_z81a z 8 1
+bk_za z
+bk_zb z
+bk_zz41z13a z z 4 1 z 1 3
+bk_zzz31a z z z 3 1
+bl_148z483a 1 4 8 z 4 8 3
+bl_15a 1 5
+bl_188a 1 8 8
+bl_195a 1 9 5
+bl_1a 1
+bl_1b 1
+bl_1zz97a 1 z z 9 7
+bl_22z4a 2 2 z 4
+bl_26a 2 6
+bl_2747537a 2 7 4 7 5 3 7
+bl_293zz12a 2 9 3 z z 1 2
+bl_2a 2
+bl_2b 2
+bl_2o76a 2 o 7 6
+bl_31oa 3 1 o
+bl_32213a 3 2 2 1 3
+bl_339a 3 3 9
+bl_3457a 3 4 5 7
+bl_36z325za 3 6 z 3 2 5 z
+bl_3a 3
+bl_3b 3
+bl_43138a 4 3 1 3 8
+bl_4599a 4 5 9 9
+bl_469a 4 6 9
+bl_47oa 4 7 o
+bl_4a 4
+bl_4b 4
+bl_4oa 4 o
+bl_53oa 5 3 o
+bl_55243a 5 5 2 4 3
+bl_567872za 5 6 7 8 7 2 z
+bl_5a 5
+bl_5b 5
+bl_5z8a 5 z 8
+bl_5za 5 z
+bl_6526a 6 5 2 6
+bl_65a 6 5
+bl_672o642a 6 7 2 o 6 4 2
+bl_6823a 6 8 2 3
+bl_6a 6
+bl_6b 6
+bl_6z86z92a 6 z 8 6 z 9 2
+bl_734z6a 7 3 4 z 6
+bl_74a 7 4
+bl_75a 7 5
+bl_7782a 7 7 8 2
+bl_7a 7
+bl_7b 7
+bl_7o449a 7 o 4 4 9
+bl_84118a 8 4 1 1 8
+bl_84oa 8 4 o
+bl_854a 8 5 4
+bl_89a 8 9
+bl_8a 8
+bl_8b 8
+bl_8o88377a 8 o 8 8 3 7 7
+bl_93587z5a 9 3 5 8 7 z 5
+bl_95576a 9 5 5 7 6
+bl_966a 9 6 6
+bl_9a 9
+bl_9b 9
+bl_9o15a 9 o 1 5
+bl_9za 9 z
+bl_o2861o5a o 2 8 6 1 o 5
+bl_o3ooa o 3 o o
+bl_o4o33a o 4 o 3 3
+bl_o8oo9a o 8 o o 9
+bl_oa o
+bl_ob o
+bl_oo217a o o 2 1 7
+bl_z1a z 1
+bl_z2a z 2
+bl_z691a z 6 9 1
+bl_z716163a z 7 1 6 1 6 3
+bl_z79za z 7 9 z
+bl_za z
+bl_zb z
+bm_129a 1 2 9
+bm_1487757a 1 4 8 7 7 5 7
+bm_1491zz3a 1 4 9 1 z z 3
+bm_17z8a 1 7 z 8
+bm_1a 1
+bm_1b 1
+bm_1oo74a 1 o o 7 4
+bm_22944o5a 2 2 9 4 4 o 5
+bm_23786a 2 3 7 8 6
+bm_23za 2 3 z
+bm_27a 2 7
+bm_28693a 2 8 6 9 3
+bm_2a 2
+bm_2b 2
+bm_34z1a 3 4 z 1
+bm_35548o7a 3 5 5 4 8 o 7
+bm_3593a 3 5 9 3
+bm_3a 3
+bm_3b 3
+bm_3o1o4a 3 o 1 o 4
+bm_3ooa 3 o o
+bm_413a 4 1 3
+bm_4218a 4 2 1 8
+bm_463255oa 4 6 3 2 5 5 o
+bm_46a 4 6
+bm_49158a 4 9 1 5 8
+bm_4a 4
+bm_4b 4
+bm_51a 5 1
+bm_5338a 5 3 3 8
+bm_54788a 5 4 7 8 8
+bm_5672o24a 5 6 7 2 o 2 4
+bm_5a 5
+bm_5b 5
+bm_5zza 5 z z
+bm_6151a 6 1 5 1
+bm_6257a 6 2 5 7
+bm_65a 6 5
+bm_682a 6 8 2
+bm_6a 6
+bm_6b 6
+bm_6oa 6 o
+bm_716a 7 1 6
+bm_74a 7 4
+bm_75a 7 5
+bm_76a 7 6
+bm_7a 7
+bm_7b 7
+bm_7z69616a 7 z 6 9 6 1 6
+bm_8311288a 8 3 1 1 2 8 8
+bm_844a 8 4 4
+bm_859a 8 5 9
+bm_8a 8
+bm_8b 8
+bm_8o6645oa 8 o 6 6 4 5 o
+bm_8z64368a 8 z 6 4 3 6 8
+bm_92za 9 2 z
+bm_94a 9 4
+bm_95247a 9 5 2 4 7
+bm_9733a 9 7 3 3
+bm_9a 9
+bm_9b 9
+bm_9za 9 z
+bm_o36o9a o 3 6 o 9
+bm_o456a o 4 5 6
+bm_o5318a o 5 3 1 8
+bm_o6oa o 6 o
+bm_o81ooa o 8 1 o o
+bm_oa o
+bm_ob o
+bm_z1a z 1
+bm_z398a z 3 9 8
+bm_z4z2a z 4 z 2
+bm_z72z2a z 7 2 z 2
+bm_za z
+bm_zb z
+bm_zz5z896a z z 5 z 8 9 6
+bn_11o646oa 1 1 o 6 4 6 o
+bn_15a 1 5
+bn_1625a 1 6 2 5
+bn_18o7oa 1 8 o 7 o
+bn_1a 1
+bn_1b 1
+bn_1z393a 1 z 3 9 3
+bn_213o5a 2 1 3 o 5
+bn_24z8828a 2 4 z 8 8 2 8
+bn_26oa 2 6 o
+bn_28727a 2 8 7 2 7
+bn_2a 2
+bn_2b 2
+bn_2oo22o4a 2 o o 2 2 o 4
+bn_34a 3 4
+bn_357236za 3 5 7 2 3 6 z
+bn_381a 3 8 1
+bn_3a 3
+bn_3b 3
+bn_3oa 3 o
+bn_3zza 3 z z
+bn_4175a 4 1 7 5
+bn_42215a 4 2 2 1 5
+bn_43a 4 3
+bn_455a 4 5 5
+bn_47631zza 4 7 6 3 1 z z
+bn_4a 4
+bn_4b 4
+bn_52a 5 2
+bn_53a 5 3
+bn_53b 5 3
+bn_5699a 5 6 9 9
+bn_5a 5
+bn_5b 5
+bn_5oa 5 o
+bn_612z781a 6 1 2 z 7 8 1
+bn_62a 6 2
+bn_668a 6 6 8
+bn_6773266a 6 7 7 3 2 6 6
+bn_67a 6 7
+bn_6a 6
+bn_6b 6
+bn_7176a 7 1 7 6
+bn_71o14a 7 1 o 1 4
+bn_756a 7 5 6
+bn_7a 7
+bn_7b 7
+bn_7o6a 7 o 6
+bn_7zz9a 7 z z 9
+bn_827a 8 2 7
+bn_8333779a 8 3 3 3 7 7 9
+bn_84o1636a 8 4 o 1 6 3 6
+bn_8614a 8 6 1 4
+bn_8a 8
+bn_8b 8
+bn_8z65za 8 z 6 5 z
+bn_91832o8a 9 1 8 3 2 o 8
+bn_92959a 9 2 9 5 9
+bn_946a 9 4 6
+bn_9737za 9 7 3 7 z
+bn_9796586a 9 7 9 6 5 8 6
+bn_9a 9
+bn_9b 9
+bn_o3854a o 3 8 5 4
+bn_o3ooa o 3 o o
+bn_o423a o 4 2 3
+bn_oa o
+bn_ob o
+bn_oo9a o o 9
+bn_oo9oa o o 9 o
+bn_z294a z 2 9 4
+bn_z2a z 2
+bn_z5za z 5 z
+bn_z96za z 9 6 z
+bn_za z
+bn_zb z
+bn_zz444a z z 4 4 4

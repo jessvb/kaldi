@@ -1,0 +1,87 @@
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3/decode_test data-fmllr-tri3/test data/test exp/tri3 data-fmllr-tri3/test/log data-fmllr-tri3/test/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/test to data-fmllr-tri3/test
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/test
+steps/nnet/make_fmllr_feats.sh: Done!, type lda_fmllr, data/test --> data-fmllr-tri3/test, using : raw-trans None, gmm exp/tri3, trans exp/tri3/decode_test
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3_ali data-fmllr-tri3/train data/train exp/tri3 data-fmllr-tri3/train/log data-fmllr-tri3/train/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/train to data-fmllr-tri3/train
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/train
+steps/nnet/make_fmllr_feats.sh: Done!, type lda_fmllr, data/train --> data-fmllr-tri3/train, using : raw-trans None, gmm exp/tri3, trans exp/tri3_ali
+Speakers, src=163, trn=147, cv=16 /tmp/$(whoami)_Noz6C/speakers_cv
+utils/data/subset_data_dir.sh: reducing #utt from 12549 to 11317
+utils/data/subset_data_dir.sh: reducing #utt from 12549 to 1232
+# steps/nnet/pretrain_dbn.sh --hid-dim 1024 --rbm-iter 20 data-fmllr-tri3/train exp/dnn4_pretrain-dbn 
+# Started at Mon Apr 29 11:58:05 UTC 2019
+#
+steps/nnet/pretrain_dbn.sh --hid-dim 1024 --rbm-iter 20 data-fmllr-tri3/train exp/dnn4_pretrain-dbn
+# INFO
+steps/nnet/pretrain_dbn.sh : Pre-training Deep Belief Network as a stack of RBMs
+	 dir       : exp/dnn4_pretrain-dbn 
+	 Train-set : data-fmllr-tri3/train '12549'
+
+LOG ([5.5.286~1-b96ca]:main():cuda-gpu-available.cc:60) 
+
+### IS CUDA GPU AVAILABLE? '1173406086d5' ###
+WARNING ([5.5.286~1-b96ca]:SelectGpuId():cu-device.cc:221) Not in compute-exclusive mode.  Suggestion: use 'nvidia-smi -c 3' to set compute exclusive mode
+LOG ([5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:349) Selecting from 1 GPUs
+LOG ([5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:364) cudaSetDevice(0): Tesla P100-PCIE-16GB	free:7722M, used:8558M, total:16280M, free/total:0.474353
+LOG ([5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:411) Trying to select device: 0 (automatically), mem_ratio: 0.474353
+LOG ([5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:430) Success selecting device 0 free mem ratio: 0.474353
+LOG ([5.5.286~1-b96ca]:FinalizeActiveGpu():cu-device.cc:284) The active GPU is [0]: Tesla P100-PCIE-16GB	free:7658M, used:8622M, total:16280M, free/total:0.470422 version 6.0
+### HURRAY, WE GOT A CUDA GPU FOR COMPUTATION!!! ##
+
+### Testing CUDA setup with a small computation (setup = cuda-toolkit + gpu-driver + kaldi):
+### Test OK!
+
+# PREPARING FEATURES
+copy-feats --compress=true scp:data-fmllr-tri3/train/feats.scp ark,scp:/tmp/kaldi.2bXC/train.ark,exp/dnn4_pretrain-dbn/train_sorted.scp 
+LOG (copy-feats[5.5.286~1-b96ca]:main():copy-feats.cc:143) Copied 12549 feature matrices.
+# 'apply-cmvn' not used,
+feat-to-dim 'ark:copy-feats scp:exp/dnn4_pretrain-dbn/train.scp ark:- |' - 
+copy-feats scp:exp/dnn4_pretrain-dbn/train.scp ark:- 
+WARNING (feat-to-dim[5.5.286~1-b96ca]:Close():kaldi-io.cc:515) Pipe copy-feats scp:exp/dnn4_pretrain-dbn/train.scp ark:- | had nonzero return status 36096
+# feature dim : 40 (input of 'feature_transform')
++ default 'feature_transform_proto' with splice +/-5 frames
+nnet-initialize --binary=false exp/dnn4_pretrain-dbn/splice5.proto exp/dnn4_pretrain-dbn/tr_splice5.nnet 
+VLOG[1] (nnet-initialize[5.5.286~1-b96ca]:Init():nnet-nnet.cc:314) <Splice> <InputDim> 40 <OutputDim> 440 <BuildVector> -5:5 </BuildVector>
+LOG (nnet-initialize[5.5.286~1-b96ca]:main():nnet-initialize.cc:63) Written initialized model to exp/dnn4_pretrain-dbn/tr_splice5.nnet
+# compute normalization stats from 10k sentences
+compute-cmvn-stats ark:- exp/dnn4_pretrain-dbn/cmvn-g.stats 
+nnet-forward --print-args=true --use-gpu=yes exp/dnn4_pretrain-dbn/tr_splice5.nnet 'ark:copy-feats scp:exp/dnn4_pretrain-dbn/train.scp.10k ark:- |' ark:- 
+WARNING (nnet-forward[5.5.286~1-b96ca]:SelectGpuId():cu-device.cc:221) Not in compute-exclusive mode.  Suggestion: use 'nvidia-smi -c 3' to set compute exclusive mode
+LOG (nnet-forward[5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:349) Selecting from 1 GPUs
+LOG (nnet-forward[5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:364) cudaSetDevice(0): Tesla P100-PCIE-16GB	free:7722M, used:8558M, total:16280M, free/total:0.474353
+LOG (nnet-forward[5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:411) Trying to select device: 0 (automatically), mem_ratio: 0.474353
+LOG (nnet-forward[5.5.286~1-b96ca]:SelectGpuIdAuto():cu-device.cc:430) Success selecting device 0 free mem ratio: 0.474353
+LOG (nnet-forward[5.5.286~1-b96ca]:FinalizeActiveGpu():cu-device.cc:284) The active GPU is [0]: Tesla P100-PCIE-16GB	free:7658M, used:8622M, total:16280M, free/total:0.470422 version 6.0
+copy-feats scp:exp/dnn4_pretrain-dbn/train.scp.10k ark:- 
+LOG (copy-feats[5.5.286~1-b96ca]:main():copy-feats.cc:143) Copied 10000 feature matrices.
+LOG (nnet-forward[5.5.286~1-b96ca]:main():nnet-forward.cc:192) Done 10000 files in 0.170679min, (fps 179016)
+LOG (compute-cmvn-stats[5.5.286~1-b96ca]:main():compute-cmvn-stats.cc:168) Wrote global CMVN stats to exp/dnn4_pretrain-dbn/cmvn-g.stats
+LOG (compute-cmvn-stats[5.5.286~1-b96ca]:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 10000 utterances; 0 had errors.
+# + normalization of NN-input at 'exp/dnn4_pretrain-dbn/tr_splice5_cmvn-g.nnet'
+LOG (nnet-concat[5.5.286~1-b96ca]:main():nnet-concat.cc:53) Reading exp/dnn4_pretrain-dbn/tr_splice5.nnet
+LOG (nnet-concat[5.5.286~1-b96ca]:main():nnet-concat.cc:65) Concatenating cmvn-to-nnet exp/dnn4_pretrain-dbn/cmvn-g.stats -|
+cmvn-to-nnet exp/dnn4_pretrain-dbn/cmvn-g.stats - 
+LOG (cmvn-to-nnet[5.5.286~1-b96ca]:main():cmvn-to-nnet.cc:114) Written cmvn in 'nnet1' model to: -
+LOG (nnet-concat[5.5.286~1-b96ca]:main():nnet-concat.cc:82) Written model to exp/dnn4_pretrain-dbn/tr_splice5_cmvn-g.nnet
+
+### Showing the final 'feature_transform':
+nnet-info exp/dnn4_pretrain-dbn/tr_splice5_cmvn-g.nnet 
+num-components 3
+input-dim 40
+output-dim 440
+number-of-parameters 0.00088 millions
+component 1 : <Splice>, input-dim 40, output-dim 440, 
+  frame_offsets [ -5 -4 -3 -2 -1 0 1 2 3 4 5 ]
+component 2 : <AddShift>, input-dim 440, output-dim 440, 
+  shift_data ( min -0.112331, max 0.201028, mean 0.00303444, stddev 0.0428984, skewness 1.87307, kurtosis 8.64522 ) , lr-coef 0
+component 3 : <Rescale>, input-dim 440, output-dim 440, 
+  scale_data ( min 0.26242, max 1.05109, mean 0.77193, stddev 0.171966, skewness -0.800466, kurtosis 0.348411 ) , lr-coef 0
+LOG (nnet-info[5.5.286~1-b96ca]:main():nnet-info.cc:57) Printed info about exp/dnn4_pretrain-dbn/tr_splice5_cmvn-g.nnet
+###
+
+# PRE-TRAINING RBM LAYER 1
+# initializing 'exp/dnn4_pretrain-dbn/1.rbm.init'
+# pretraining 'exp/dnn4_pretrain-dbn/1.rbm' (input gauss, lrate 0.01, iters 40)

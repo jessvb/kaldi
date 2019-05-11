@@ -1,0 +1,107 @@
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3/decode_test data-fmllr-tri3/test data/test exp/tri3 data-fmllr-tri3/test/log data-fmllr-tri3/test/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/test to data-fmllr-tri3/test
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/test
+steps/nnet/make_fmllr_feats.sh: Done!, type lda_fmllr, data/test --> data-fmllr-tri3/test, using : raw-trans None, gmm exp/tri3, trans exp/tri3/decode_test
+steps/nnet/make_fmllr_feats.sh --nj 10 --cmd run.pl --mem 2G --transform-dir exp/tri3_ali data-fmllr-tri3/train data/train exp/tri3 data-fmllr-tri3/train/log data-fmllr-tri3/train/data
+steps/nnet/make_fmllr_feats.sh: feature type is lda_fmllr
+utils/copy_data_dir.sh: copied data from data/train to data-fmllr-tri3/train
+utils/validate_data_dir.sh: Successfully validated data-directory data-fmllr-tri3/train
+steps/nnet/make_fmllr_feats.sh: Done!, type lda_fmllr, data/train --> data-fmllr-tri3/train, using : raw-trans None, gmm exp/tri3, trans exp/tri3_ali
+Speakers, src=51, trn=46, cv=5 /tmp/$(whoami)_WjOdW/speakers_cv
+utils/data/subset_data_dir.sh: reducing #utt from 3926 to 3541
+utils/data/subset_data_dir.sh: reducing #utt from 3926 to 385
+exp/dnn4_pretrain-dbn/log/rbm.3.log:progress: [5.17554 4.09227 4.00056 3.95978 3.93403 3.91208 3.88638 3.86663 ]
+exp/dnn4_pretrain-dbn/log/rbm.4.log:progress: [3.98183 3.15666 3.0848 3.05124 3.03001 3.01335 2.99411 2.97837 ]
+exp/dnn4_pretrain-dbn/log/rbm.5.log:progress: [3.40392 2.62909 2.5654 2.5412 2.52777 2.5163 2.50414 2.49229 ]
+exp/dnn4_pretrain-dbn/log/rbm.6.log:progress: [2.67115 2.15156 2.09821 2.07543 2.06189 2.05378 2.04379 2.03537 ]
+
+Pre-training finished.
+# Removing features tmpdir /tmp/kaldi.gqU2 @ 7da542a4349c
+train.ark
+# Accounting: time=1463 threads=1
+# Ended (code 0) at Mon Apr 29 18:33:22 UTC 2019, elapsed time 1463 seconds
+# steps/nnet/pretrain_dbn.sh --hid-dim 1024 --rbm-iter 20 data-fmllr-tri3/train exp/dnn4_pretrain-dbn 
+# Started at Mon Apr 29 18:52:42 UTC 2019
+#
+steps/nnet/pretrain_dbn.sh --hid-dim 1024 --rbm-iter 20 data-fmllr-tri3/train exp/dnn4_pretrain-dbn
+# INFO
+steps/nnet/pretrain_dbn.sh : Pre-training Deep Belief Network as a stack of RBMs
+	 dir       : exp/dnn4_pretrain-dbn 
+	 Train-set : data-fmllr-tri3/train '3926'
+
+steps/nnet/pretrain_dbn.sh Skipping, already have exp/dnn4_pretrain-dbn/6.dbn
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Apr 29 18:52:42 UTC 2019, elapsed time 0 seconds
+ITERATION 13: TRAIN AVG.LOSS 0.3935, (lrate7.8125e-06), CROSSVAL AVG.LOSS 0.8366, nnet accepted (nnet_dbn_dnn_iter13_learnrate7.8125e-06_tr0.3935_cv0.8366)
+ITERATION 14: TRAIN AVG.LOSS 0.3932, (lrate3.90625e-06), CROSSVAL AVG.LOSS 0.8361, nnet accepted (nnet_dbn_dnn_iter14_learnrate3.90625e-06_tr0.3932_cv0.8361)
+finished, too small rel. improvement 0.000570174
+steps/nnet/train_scheduler.sh: Succeeded training the Neural Network : 'exp/dnn4_pretrain-dbn_dnn/final.nnet'
+steps/nnet/train.sh: Successfuly finished. 'exp/dnn4_pretrain-dbn_dnn'
+# Removing features tmpdir /tmp/kaldi.BhiT @ 7da542a4349c
+cv.ark
+train.ark
+# Accounting: time=192 threads=1
+# Ended (code 0) at Mon Apr 29 18:36:35 UTC 2019, elapsed time 192 seconds
+# steps/nnet/train.sh --feature-transform exp/dnn4_pretrain-dbn/final.feature_transform --dbn exp/dnn4_pretrain-dbn/6.dbn --hid-layers 0 --learn-rate 0.008 data-fmllr-tri3/train_tr90 data-fmllr-tri3/train_cv10 data/lang_test_bg exp/tri3_ali exp/tri3_ali exp/dnn4_pretrain-dbn_dnn 
+# Started at Mon Apr 29 18:52:42 UTC 2019
+#
+steps/nnet/train.sh --feature-transform exp/dnn4_pretrain-dbn/final.feature_transform --dbn exp/dnn4_pretrain-dbn/6.dbn --hid-layers 0 --learn-rate 0.008 data-fmllr-tri3/train_tr90 data-fmllr-tri3/train_cv10 data/lang_test_bg exp/tri3_ali exp/tri3_ali exp/dnn4_pretrain-dbn_dnn
+
+# INFO
+steps/nnet/train.sh : Training Neural Network
+	 dir       : exp/dnn4_pretrain-dbn_dnn 
+	 Train-set : data-fmllr-tri3/train_tr90 3541, exp/tri3_ali 
+	 CV-set    : data-fmllr-tri3/train_cv10 385 exp/tri3_ali 
+
+SKIPPING TRAINING... (steps/nnet/train.sh)
+nnet already trained : exp/dnn4_pretrain-dbn_dnn/final.nnet (nnet/nnet_dbn_dnn_iter14_learnrate3.90625e-06_tr0.3932_cv0.8361_final_)
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Apr 29 18:52:42 UTC 2019, elapsed time 0 seconds
+steps/nnet/decode.sh --nj 20 --cmd run.pl --mem 4G --acwt 0.2 exp/tri3/graph data-fmllr-tri3/test exp/dnn4_pretrain-dbn_dnn/decode_test
+steps/nnet/align.sh --nj 20 --cmd run.pl --mem 2G data-fmllr-tri3/train data/lang_test_bg exp/dnn4_pretrain-dbn_dnn exp/dnn4_pretrain-dbn_dnn_ali
+steps/nnet/align.sh: aligning data 'data-fmllr-tri3/train' using nnet/model 'exp/dnn4_pretrain-dbn_dnn', putting alignments in 'exp/dnn4_pretrain-dbn_dnn_ali'
+steps/nnet/align.sh: done aligning data.
+steps/nnet/make_denlats.sh --nj 20 --cmd run.pl --mem 4G --acwt 0.2 --lattice-beam 10.0 --beam 18.0 data-fmllr-tri3/train data/lang_test_bg exp/dnn4_pretrain-dbn_dnn exp/dnn4_pretrain-dbn_dnn_denlats
+Making unigram grammar FST in exp/dnn4_pretrain-dbn_dnn_denlats/lang_test_bg
+Compiling decoding graph in exp/dnn4_pretrain-dbn_dnn_denlats/dengraph
+Graph exp/dnn4_pretrain-dbn_dnn_denlats/dengraph/HCLG.fst already exists: skipping graph creation.
+steps/nnet/make_denlats.sh: generating denlats from data 'data-fmllr-tri3/train', putting lattices in 'exp/dnn4_pretrain-dbn_dnn_denlats'
+steps/nnet/make_denlats.sh: done generating denominator lattices.
+steps/nnet/train_mpe.sh --cmd run.pl --gpu 1 --num-iters 6 --acwt 0.2 --do-smbr true data-fmllr-tri3/train data/lang_test_bg exp/dnn4_pretrain-dbn_dnn exp/dnn4_pretrain-dbn_dnn_ali exp/dnn4_pretrain-dbn_dnn_denlats exp/dnn4_pretrain-dbn_dnn_smbr
+Pass 1 (learnrate 0.00001)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/1.nnet exists
+ TRAINING FINISHED; Time taken = 1.0897 min; processed 12102.4 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.994101 over 791283 frames.
+Pass 2 (learnrate 1e-05)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/2.nnet exists
+ TRAINING FINISHED; Time taken = 1.13919 min; processed 11576.6 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.994729 over 791283 frames.
+Pass 3 (learnrate 1e-05)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/3.nnet exists
+ TRAINING FINISHED; Time taken = 1.10123 min; processed 11975.7 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.995022 over 791283 frames.
+Pass 4 (learnrate 1e-05)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/4.nnet exists
+ TRAINING FINISHED; Time taken = 1.1462 min; processed 11505.9 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.995106 over 791283 frames.
+Pass 5 (learnrate 1e-05)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/5.nnet exists
+ TRAINING FINISHED; Time taken = 1.08601 min; processed 12143.6 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.995159 over 791283 frames.
+Pass 6 (learnrate 1e-05)
+Skipped, file exp/dnn4_pretrain-dbn_dnn_smbr/6.nnet exists
+ TRAINING FINISHED; Time taken = 1.13037 min; processed 11667 frames per second.
+ Done 3926 files, 0 with no reference alignments, 0 with no lattices, 0 with other errors.
+ Overall average frame-accuracy is 0.995211 over 791283 frames.
+MPE/sMBR training finished
+Priors are already re-estimated, skipping... (exp/dnn4_pretrain-dbn_dnn_smbr/prior_counts)
+steps/nnet/train_mpe.sh: Done. 'exp/dnn4_pretrain-dbn_dnn_smbr'
+steps/nnet/decode.sh --nj 20 --cmd run.pl --mem 4G --nnet exp/dnn4_pretrain-dbn_dnn_smbr/1.nnet --acwt 0.2 exp/tri3/graph data-fmllr-tri3/test exp/dnn4_pretrain-dbn_dnn_smbr/decode_test_it1
+steps/nnet/decode.sh --nj 20 --cmd run.pl --mem 4G --nnet exp/dnn4_pretrain-dbn_dnn_smbr/6.nnet --acwt 0.2 exp/tri3/graph data-fmllr-tri3/test exp/dnn4_pretrain-dbn_dnn_smbr/decode_test_it6
+Success
